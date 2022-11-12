@@ -51,27 +51,18 @@ const api = async () => {
 
     cvTitle.removeAttribute('hidden');
 
-    console.log(cvObj);
-    console.log("Employment:");
     renderTitle(cvKeys[0])
     cvObj.Employment.forEach(obj => {
-        console.log(obj);
-        console.log(obj.heading);
-        console.log(obj.describtion);
         render(obj.heading, obj.describtion)
     });
 
-    console.log("Education:");
     renderTitle(cvKeys[1])
     cvObj.Education.forEach(obj => {
-        console.log(obj);
         render(obj.heading, obj.describtion)
     });
 
-    console.log("Driver License:");
     renderTitle(cvKeys[2])
     cvObj.License.forEach(obj => {
-        console.log(obj);
         render(obj.heading, obj.describtion)
     });
 
